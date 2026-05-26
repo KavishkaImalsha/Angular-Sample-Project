@@ -18,5 +18,9 @@
              <!-- event binding -->
             <button (click) ="showName()" class="p-5 border border-blue-400 bg-blue-400 rounded-full">Show name</button>
         </div>
+        <div class="flex flex-col items-center justify-center ">
+            <input [(value)] = "userName" class="text-blue-500 my-10 text-3xl font-bold"/>
+            <button (click) = "changeName('Kamal')" class="p-5 border border-blue-400 bg-blue-400 rounded-full">Change name to kamal</button>
+        </div>
     </div>
 </div>

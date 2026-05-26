@@ -24,4 +24,8 @@ export class Login {
     this.showEmail = true
     return this.userName
   }
+
+  changeName(name: string) { 
+    this.userName = name
+  }
 }
