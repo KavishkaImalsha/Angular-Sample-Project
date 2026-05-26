@@ -3,6 +3,7 @@ import { Login } from './components/login/login';
 import { Register } from './components/register/register';
 import { NotFound } from './components/not-found/not-found';
 import { ConditionalFlow } from './components/conditional-flow/conditional-flow';
+import { ForLoopTable } from './components/for-loop-table/for-loop-table';
 
 export const routes: Routes = [
     //Map default route
@@ -22,6 +23,10 @@ export const routes: Routes = [
     {
         path: 'conditions',
         component: ConditionalFlow
+    },
+    {
+        path: 'employees',
+        component: ForLoopTable
     },
     //Path is not found show like
     {
