@@ -1,0 +1,38 @@
+<div class="flex">
+    <div>
+        <div class="flex gp-3 w-1/2">
+            <button (click)="isSideBarShow = !isSideBarShow" class="p-5 bg-green-500 rounded">Open</button>
+            <div class="w-50" [ngClass]="divStyle">
+                <p class="p-5">Dynamic Div</p>
+            </div>
+            <div>
+                <input type="text" class="w-50 border border-gray-500 rounded" [(ngModel)]="divStyle">
+                --{{divStyle}}
+            </div>
+        </div>
+
+        <div class="flex gap-5 my-10">
+            <div>
+                <input type="text" class="w-50 border border-gray-500 rounded" [(ngModel)]="productPrice">
+            </div>
+            <div>
+                <p class="text-lg font-bold" 
+                [ngClass]="productPrice > 500 ? 'text-red-500': 'text-green-500'"
+                >{{productPrice > 500 ? "Price is high" : "Price is good"}}</p>
+            </div>
+        </div>
+
+        <div class="my-10">
+            <button (click)="isDanger = !isDanger" 
+            class="p-5 rounded" [ngClass]="isDanger ? 'bg-red-500':'bg-green-500'">Click Me</button>
+        </div>
+
+        <div [ngStyle]="{'background-color': bgColor}" class="w-50 text-center">
+            <p [ngStyle]="myColors">Hello</p>
+        </div>
+    </div>
+    <div class="w-1/2" [ngClass]="isSideBarShow ? 'flex' : 'hidden'">
+        <p>Side panel</p>
+        <button (click)="isSideBarShow = !isSideBarShow" class="p-5 bg-green-500 rounded">Close</button>
+    </div>
+</div>
