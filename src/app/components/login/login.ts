@@ -14,12 +14,14 @@ export class Login {
     description: "Web Developer"
   }
   email: String
+  showEmail:Boolean = false
 
   constructor() { 
     this.email = "testuser@gmail.com"
   }
 
   showName() { 
+    this.showEmail = true
     return this.userName
   }
 }

@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="flex flex-col justify-center items-center h-screen">
+    <h1 class="text-bold text-3xl">Welcome to user details page</h1>
+
+    <div class="w-[50%] h-[50%] my-10 border-2 border-gray-400 rounded">
+        <div class="grid grid-cols-2 mx-2 my-5">
+            <!-- itercepctor --> 
+            <input type="text" [value]="userName"
+            class="w-50 border border-gray-200 rounded-full text-center bg-gray-200" disabled>
+            <!-- property binding -->
+            <p>User ID: {{userId}}</p>
+        </div>
+        <div class="my-10 text-3xl font-bold text-center">
+            @if(showEmail) {
+                <p>{{email}}</p>
+            }
+        </div>
+        <div class="flex items-center justify-center">
+             <!-- event binding -->
+            <button (click) ="showName()" class="p-5 border border-blue-400 bg-blue-400 rounded-full">Show name</button>
+        </div>
+    </div>
+</div>
