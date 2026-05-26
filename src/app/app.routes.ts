@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Login } from './components/login/login';
 import { Register } from './components/register/register';
 import { NotFound } from './components/not-found/not-found';
+import { ConditionalFlow } from './components/conditional-flow/conditional-flow';
 
 export const routes: Routes = [
     //Map default route
@@ -17,6 +18,10 @@ export const routes: Routes = [
     {
         path: 'register',
         component: Register
+    },
+    {
+        path: 'conditions',
+        component: ConditionalFlow
     },
     //Path is not found show like
     {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-register',
@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './register.html',
   styleUrl: './register.css',
 })
-export class Register {}
+export class Register {
+  count = signal(0)
+  userDetails = signal({
+    email: "testuser@gmail.com"
+  })
+
+  changeCount(count: number) { 
+    this.count.set(count)
+  }
+}

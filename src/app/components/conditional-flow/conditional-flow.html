@@ -1,0 +1,51 @@
+<div class="flex gap-5">
+    <div class="flex justify-center items-center gap-3">
+        <input type="checkbox" [(ngModel)]="isCodeHave" />
+        <p class="text-xl text-bold">Do you have offer code?</p>
+    </div>
+    @if(isCodeHave){
+        <input type="text" class="p-5 border border-gray-400 rounded" placeholder="Enter the code">
+    }
+</div>
+
+<div class="my-10 flex gap-5">
+    @if(isDanger() == false){
+        <div class="bg-red-400 p-5 w-50 rounded">
+            Danger Zone
+        </div>
+    }@else{
+        <div class="bg-green-400 p-5 w-50 rounded">
+            Comfort Zone
+        </div>
+    }
+    <button class="p-5 bg-green-800 rounded"
+        (click)="setIsDanger()"
+    >Toggle</button>
+</div>
+
+<div class="my-10 flex gap-5">
+    <input type="text" [(ngModel)]="studentMark">
+    @if(studentMark >= 75){
+        <div>
+            <p class="text-green-600 text-md font-bold">
+                Better Marks
+            </p>
+        </div>
+    }@else if (studentMark < 75 && studentMark >= 65) {
+        <div>
+            <p class="text-yellow-600 text-md font-bold">
+                Warning Mark
+            </p>
+        </div>
+    }@else {
+        @if(studentMark == 0) {
+            <span class="font-bold text-md">Enter the marks</span>
+        }@else {
+            <div>
+            <p class="text-red-600 text-md font-bold">
+                Danger Marks
+            </p>
+        </div>
+        }
+    }
+</div>
